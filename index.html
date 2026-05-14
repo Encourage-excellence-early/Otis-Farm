@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prime Harvest | Premium Livestock · Abuja</title>
+    <title>Otis Farm | Premium Livestock · Abuja</title>
 
     <!-- Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,30 +12,33 @@
 
     <style>
         /* ============================================================
-           DESIGN SYSTEM — PREMIUM AGRICULTURE
-           Copper #D7A87F · Black #0B0B0B · White #FFFFFF
+           DESIGN SYSTEM — NOIR & FLAME
+           Black #000000 · Green #B0D43B · White #FFFFFF
         ============================================================ */
         :root {
-            --black:     #0B0B0B;
-            --black-2:   #111111;
-            --black-3:   #1a1a1a;
-            --black-4:   #222222;
-            --copper:      #D7A87F;
-            --copper-dim:  rgba(215,168,127,0.12);
-            --copper-line: rgba(215,168,127,0.22);
-            --white:     #FFFFFF;
-            --off-white: #F7F3EB;
-            --grey:      #888888;
-            --grey-lt:   #BBBBBB;
-            --wa:        #25D366;
-            --t:         all 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+            --deep:        #000000;
+            --deep-2:      #121212;
+            --deep-3:      #1A1A1A;
+            --deep-4:      #242424;
+            --forest:      #FFFFFF;
+            --leaf:        #B0D43B;
+            --leaf-dim:    rgba(176,212,59,0.14);
+            --leaf-line:   rgba(176,212,59,0.22);
+            --earth:       #FFFFFF;
+            --cream:       #FFFFFF;
+            --sage:        #E0E0E0;
+            --white:       #FFFFFF;
+            --grey:        #B0B0B0;
+            --grey-lt:     #D4D4D4;
+            --wa:          #B0D43B;
+            --t:           all 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
         *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
         html { scroll-behavior:smooth; }
         body {
             font-family: 'DM Sans', sans-serif;
-            background: var(--black);
+            background: var(--deep);
             color: var(--white);
             overflow-x: hidden;
             line-height: 1.6;
@@ -52,33 +55,33 @@
             transition: background 0.4s ease, padding 0.4s ease;
         }
         .nav.scrolled {
-            background: rgba(11,11,11,0.96);
+            background: rgba(15,31,22,0.96);
             backdrop-filter: blur(16px);
             padding: 16px 8%;
-            border-bottom: 1px solid var(--copper-line);
+            border-bottom: 1px solid var(--leaf-line);
         }
         .nav-logo {
             font-family: 'Playfair Display', serif;
             font-size: 1.5rem; font-weight: 700; letter-spacing: 3px;
             color: var(--white); text-decoration: none;
         }
-        .nav-logo span { color: var(--copper); }
+        .nav-logo span { color: var(--leaf); }
         .nav-links { display: flex; align-items: center; gap: 34px; }
         .nav-links a {
             color: var(--grey-lt); text-decoration: none;
             font-size: 0.78rem; font-weight: 500; letter-spacing: 2px;
             text-transform: uppercase; transition: color 0.3s;
         }
-        .nav-links a:hover { color: var(--copper); }
+        .nav-links a:hover { color: var(--leaf); }
         .nav-wa {
             padding: 10px 24px;
-            border: 1px solid var(--copper);
-            color: var(--copper); text-decoration: none;
+            border: 1px solid var(--leaf);
+            color: var(--leaf); text-decoration: none;
             font-size: 0.72rem; font-weight: 700; letter-spacing: 2px;
             text-transform: uppercase; border-radius: 3px;
             transition: var(--t);
         }
-        .nav-wa:hover { background: var(--copper); color: var(--black); }
+        .nav-wa:hover { background: var(--leaf); color: var(--deep); }
 
         .hamburger {
             display: none; flex-direction: column; gap: 5px;
@@ -94,7 +97,7 @@
 
         .mobile-menu {
             display: none; flex-direction: column;
-            position: fixed; inset: 0; background: var(--black);
+            position: fixed; inset: 0; background: var(--deep);
             z-index: 999; padding: 110px 8% 60px; gap: 0;
         }
         .mobile-menu.open { display: flex; }
@@ -105,7 +108,7 @@
             border-bottom: 1px solid rgba(255,255,255,0.05);
             transition: color 0.3s;
         }
-        .mobile-menu a:hover { color: var(--copper); }
+        .mobile-menu a:hover { color: var(--leaf); }
         .mobile-close {
             position: absolute; top: 28px; right: 8%;
             background: none; border: none; color: var(--white);
@@ -122,15 +125,15 @@
             padding: 0 8%; overflow: hidden;
         }
         .hero-bg {
-            position: absolute; inset: 0;
-            background: url('https://images.unsplash.com/photo-1500076656116-558758c991c1?q=90&w=2070&auto=format&fit=crop') center/cover no-repeat;
-            transform: scale(1.06);
-            transition: transform 9s ease;
+            position: absolute; top: 0; right: 0; bottom: 0; width: 70%;
+            background: url('images/hero image.jpeg') center/cover no-repeat;
+            opacity: 0.3;
+            transition: opacity 9s ease;
         }
-        .hero-bg.loaded { transform: scale(1); }
+        .hero-bg.loaded { opacity: 1; }
         .hero-overlay {
-            position: absolute; inset: 0;
-            background: linear-gradient(105deg, rgba(11,11,11,0.92) 0%, rgba(11,11,11,0.55) 55%, rgba(11,11,11,0.2) 100%);
+            position: absolute; top: 0; right: 0; bottom: 0; width: 70%;
+            background: linear-gradient(105deg, rgba(15,31,22,0.93) 0%, rgba(15,31,22,0.58) 55%, rgba(15,31,22,0.22) 100%);
         }
         .hero-content {
             position: relative; z-index: 2;
@@ -138,7 +141,7 @@
         }
         .hero-eyebrow {
             font-size: 0.68rem; font-weight: 600; letter-spacing: 5px;
-            text-transform: uppercase; color: var(--copper);
+            text-transform: uppercase; color: var(--leaf);
             margin-bottom: 22px; display: block;
             opacity: 0; animation: fadeUp 1s 0.3s forwards;
         }
@@ -148,7 +151,7 @@
             letter-spacing: -0.5px; margin-bottom: 20px;
             opacity: 0; animation: fadeUp 1s 0.5s forwards;
         }
-        .hero h1 em { font-style: italic; color: var(--copper); }
+        .hero h1 em { font-style: italic; color: var(--leaf); }
         .hero-sub {
             color: var(--grey-lt); font-size: 1.05rem; font-weight: 300;
             max-width: 480px; line-height: 1.85; margin-bottom: 40px;
@@ -158,14 +161,14 @@
             display: flex; gap: 14px; flex-wrap: wrap;
             opacity: 0; animation: fadeUp 1s 0.9s forwards;
         }
-        .btn-copper {
+        .btn-leaf {
             display: inline-flex; align-items: center; gap: 9px;
-            padding: 15px 32px; background: var(--copper); color: var(--black);
+            padding: 15px 32px; background: var(--leaf); color: var(--deep);
             text-decoration: none; font-size: 0.78rem; font-weight: 700;
             letter-spacing: 2px; text-transform: uppercase; border-radius: 3px;
             transition: var(--t); border: none; cursor: pointer; font-family: 'DM Sans', sans-serif;
         }
-        .btn-copper:hover { background: #c3976b; transform: translateY(-3px); box-shadow: 0 14px 40px rgba(215,168,127,0.35); }
+        .btn-leaf:hover { background: #89B02C; transform: translateY(-3px); box-shadow: 0 14px 40px rgba(176,212,59,0.35); }
         .btn-outline {
             display: inline-flex; align-items: center; gap: 9px;
             padding: 15px 32px; border: 1px solid rgba(255,255,255,0.35);
@@ -173,7 +176,7 @@
             font-size: 0.78rem; font-weight: 600; letter-spacing: 2px;
             text-transform: uppercase; border-radius: 3px; transition: var(--t);
         }
-        .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.07); transform: translateY(-3px); }
+        .btn-outline:hover { border-color: var(--leaf); color: var(--leaf); background: rgba(176,212,59,0.07); transform: translateY(-3px); }
         .btn-call {
             display: inline-flex; align-items: center; gap: 9px;
             padding: 15px 28px; border: 1px solid rgba(255,255,255,0.15);
@@ -181,7 +184,7 @@
             font-size: 0.78rem; font-weight: 600; letter-spacing: 2px;
             text-transform: uppercase; border-radius: 3px; transition: var(--t);
         }
-        .btn-call:hover { border-color: var(--copper); color: var(--copper); }
+        .btn-call:hover { border-color: var(--leaf); color: var(--leaf); }
 
         .hero-scroll {
             position: absolute; bottom: 36px; left: 8%;
@@ -189,22 +192,22 @@
             color: var(--grey); font-size: 0.62rem; letter-spacing: 3px; text-transform: uppercase;
             z-index: 2; opacity: 0; animation: fadeUp 1s 1.2s forwards;
         }
-        .scroll-line { width: 50px; height: 1px; background: linear-gradient(to right, var(--copper), transparent); }
+        .scroll-line { width: 50px; height: 1px; background: linear-gradient(to right, var(--leaf), transparent); }
 
         /* ============================================================
            STATS BAR
         ============================================================ */
         .stats-bar {
-            background: var(--black-2);
-            border-top: 1px solid var(--copper-line);
-            border-bottom: 1px solid var(--copper-line);
+            background: var(--deep-2);
+            border-top: 1px solid var(--leaf-line);
+            border-bottom: 1px solid var(--leaf-line);
             padding: 36px 8%;
             display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
         }
         .stat { text-align: center; }
         .stat-num {
             font-family: 'Playfair Display', serif;
-            font-size: 2.6rem; font-weight: 700; color: var(--copper); line-height: 1;
+            font-size: 2.6rem; font-weight: 700; color: var(--leaf); line-height: 1;
         }
         .stat-lbl {
             font-size: 0.68rem; letter-spacing: 2.5px; text-transform: uppercase;
@@ -217,7 +220,7 @@
         .section { padding: 110px 8%; }
         .eyebrow {
             display: inline-block; font-size: 0.66rem; font-weight: 600;
-            letter-spacing: 4px; text-transform: uppercase; color: var(--copper); margin-bottom: 14px;
+            letter-spacing: 4px; text-transform: uppercase; color: var(--leaf); margin-bottom: 14px;
         }
         .sec-hd { margin-bottom: 60px; }
         .sec-hd.center { text-align: center; }
@@ -228,25 +231,25 @@
         /* ============================================================
            PRODUCTS GRID
         ============================================================ */
-        .products-section { background: var(--black-2); }
+        .products-section { background: var(--deep-2); }
         .products-grid {
             display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
         }
         .prod-card {
-            background: var(--black-3); border-radius: 18px; overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.04);
+            background: var(--deep-3); border-radius: 18px; overflow: hidden;
+            border: 1px solid rgba(176,212,59,0.06);
             cursor: pointer; transition: var(--t);
         }
         .prod-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(215,168,127,0.15);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(176,212,59,0.2);
         }
         .prod-img-wrap { position: relative; overflow: hidden; height: 220px; }
         .prod-img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.7s cubic-bezier(0.165,0.84,0.44,1); }
         .prod-card:hover .prod-img { transform: scale(1.05); }
         .prod-badge {
             position: absolute; top: 16px; left: 16px;
-            background: var(--copper); color: var(--black);
+            background: var(--leaf); color: var(--deep);
             font-size: 0.6rem; font-weight: 700; letter-spacing: 2px;
             text-transform: uppercase; padding: 5px 12px; border-radius: 2px;
         }
@@ -255,68 +258,68 @@
         .prod-desc { font-size: 0.78rem; color: var(--grey); margin-bottom: 18px; }
         .prod-cta {
             display: flex; align-items: center; justify-content: space-between;
-            padding: 12px 16px; background: var(--black-4);
-            border-radius: 9px; border: 1px solid rgba(255,255,255,0.05);
+            padding: 12px 16px; background: var(--deep-4);
+            border-radius: 9px; border: 1px solid rgba(176,212,59,0.07);
             text-decoration: none; transition: var(--t);
         }
-        .prod-cta:hover { background: var(--copper); border-color: var(--copper); }
+        .prod-cta:hover { background: var(--leaf); border-color: var(--leaf); }
         .prod-cta span { font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--white); transition: color 0.3s; }
-        .prod-cta:hover span { color: var(--black); }
-        .prod-cta svg { width: 16px; height: 16px; fill: var(--copper); transition: fill 0.3s, transform 0.3s; }
-        .prod-cta:hover svg { fill: var(--black); transform: translateX(4px); }
+        .prod-cta:hover span { color: var(--deep); }
+        .prod-cta svg { width: 16px; height: 16px; fill: var(--leaf); transition: fill 0.3s, transform 0.3s; }
+        .prod-cta:hover svg { fill: var(--deep); transform: translateX(4px); }
 
         /* ============================================================
            TRUST / TESTIMONIALS
         ============================================================ */
-        .trust-section { background: var(--black-2); }
+        .trust-section { background: var(--deep-2); }
         .trust-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; max-width: 1100px; margin: 0 auto; }
         .trust-left h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 600; line-height: 1.2; margin-bottom: 18px; }
-        .trust-left h2 em { font-style: italic; color: var(--copper); }
+        .trust-left h2 em { font-style: italic; color: var(--leaf); }
         .trust-left p { color: var(--grey); font-size: 0.93rem; line-height: 1.9; }
         .trust-points { display: flex; flex-direction: column; gap: 18px; }
         .trust-pt {
             display: flex; gap: 16px; align-items: flex-start;
             padding: 20px 22px;
-            background: rgba(255,255,255,0.025);
-            border: 1px solid rgba(255,255,255,0.04);
-            border-left: 3px solid var(--copper);
+            background: rgba(176,212,59,0.04);
+            border: 1px solid rgba(176,212,59,0.06);
+            border-left: 3px solid var(--leaf);
             border-radius: 0 12px 12px 0;
             transition: var(--t);
         }
-        .trust-pt:hover { background: rgba(215,168,127,0.05); }
+        .trust-pt:hover { background: rgba(176,212,59,0.08); }
         .tp-icon { font-size: 1.15rem; margin-top: 1px; flex-shrink: 0; }
         .tp-title { font-size: 0.86rem; font-weight: 700; margin-bottom: 3px; }
         .tp-desc { font-size: 0.8rem; color: var(--grey); line-height: 1.6; }
 
-        .testimonials-section { background: var(--black); }
+        .testimonials-section { background: var(--deep); }
         .testimonial-card {
-            background: var(--black-2); border: 1px solid rgba(255,255,255,0.04);
+            background: var(--deep-2); border: 1px solid rgba(176,212,59,0.06);
             border-radius: 18px; padding: 28px 30px; transition: var(--t);
         }
-        .testimonial-card:hover { border-color: var(--copper); transform: translateY(-4px); }
+        .testimonial-card:hover { border-color: var(--leaf); transform: translateY(-4px); }
         .testimonial-card p { font-style: italic; color: var(--grey-lt); line-height: 1.8; margin-bottom: 12px; }
-        .testimonial-card span { font-weight: 700; color: var(--copper); }
+        .testimonial-card span { font-weight: 700; color: var(--leaf); }
 
         /* ============================================================
-           WHY PRIME HARVEST
+           WHY OTIS FARM
         ============================================================ */
-        .why-section { background: var(--black); }
+        .why-section { background: var(--deep); }
         .why-grid {
             display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 56px;
         }
         .why-block {
-            padding: 46px 30px; background: var(--black-2);
-            border: 1px solid rgba(255,255,255,0.03);
+            padding: 46px 30px; background: var(--deep-2);
+            border: 1px solid rgba(176,212,59,0.04);
             text-align: center; transition: var(--t);
         }
         .why-block:hover {
-            background: rgba(215,168,127,0.05);
-            border-color: rgba(215,168,127,0.18); transform: translateY(-4px);
+            background: rgba(176,212,59,0.06);
+            border-color: rgba(176,212,59,0.2); transform: translateY(-4px);
         }
         .why-num {
             font-family: 'Playfair Display', serif;
             font-size: 2.8rem; font-weight: 700;
-            color: rgba(215,168,127,0.18); line-height: 1; margin-bottom: 14px;
+            color: rgba(176,212,59,0.2); line-height: 1; margin-bottom: 14px;
         }
         .why-title { font-size: 0.95rem; font-weight: 700; margin-bottom: 9px; }
         .why-desc { font-size: 0.8rem; color: var(--grey); line-height: 1.7; }
@@ -325,51 +328,51 @@
            ABOUT
         ============================================================ */
         .about-section {
-            background: var(--off-white); color: var(--black);
+            background: var(--cream); color: var(--deep);
             border-radius: 60px 60px 0 0; position: relative; z-index: 10;
         }
-        .about-section .eyebrow { color: #8a6b2a; }
+        .about-section .eyebrow { color: var(--forest); }
         .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
         .about-img-wrap { position: relative; }
-        .about-img { width: 100%; height: 500px; object-fit: cover; border-radius: 18px; display: block; }
+        .about-img { width: 100%; max-height: 320px; height: auto; object-fit: contain; border-radius: 18px; display: block; }
         .about-badge {
             position: absolute; bottom: -22px; right: -22px;
-            background: var(--copper); color: var(--black);
+            background: var(--leaf); color: var(--deep);
             padding: 20px 26px; border-radius: 12px;
             font-family: 'Playfair Display', serif; font-size: 1.9rem; font-weight: 700;
-            line-height: 1.1; box-shadow: 0 20px 50px rgba(215,168,127,0.3);
+            line-height: 1.1; box-shadow: 0 20px 50px rgba(176,212,59,0.35);
         }
         .about-badge span {
             display: block; font-family: 'DM Sans', sans-serif;
             font-size: 0.66rem; font-weight: 700; letter-spacing: 2px;
-            text-transform: uppercase; margin-top: 4px; opacity: 0.65;
+            text-transform: uppercase; margin-top: 4px; opacity: 0.7;
         }
-        .about-text h2 { font-size: clamp(1.7rem, 3.5vw, 2.6rem); color: var(--black); margin-bottom: 18px; line-height: 1.2; }
-        .about-text p { color: #555; line-height: 1.9; font-size: 0.93rem; margin-bottom: 14px; }
+        .about-text h2 { font-size: clamp(1.7rem, 3.5vw, 2.6rem); color: var(--deep); margin-bottom: 18px; line-height: 1.2; }
+        .about-text p { color: #E0E0E0; line-height: 1.9; font-size: 0.93rem; margin-bottom: 14px; }
         .about-expanded { max-height: 0; overflow: hidden; opacity: 0; transition: max-height 0.7s ease, opacity 0.5s ease; }
         .about-expanded.open { max-height: 600px; opacity: 1; }
         .about-btn {
             display: inline-flex; align-items: center; gap: 8px;
-            background: none; border: 1px solid rgba(0,0,0,0.15);
-            color: #333; font-family: 'DM Sans', sans-serif;
+            background: none; border: 1px solid rgba(176,212,59,0.25);
+            color: var(--forest); font-family: 'DM Sans', sans-serif;
             font-size: 0.76rem; font-weight: 700; letter-spacing: 1.5px;
             text-transform: uppercase; padding: 12px 22px;
             border-radius: 50px; cursor: pointer; transition: var(--t); margin-top: 14px;
         }
-        .about-btn:hover { border-color: var(--copper); color: #8a6b2a; }
+        .about-btn:hover { border-color: var(--leaf); color: var(--forest); background: rgba(176,212,59,0.08); }
         .about-btn .arr { transition: transform 0.4s; }
         .about-btn.open .arr { transform: rotate(180deg); }
 
         /* ============================================================
            CONTACT
         ============================================================ */
-        .contact-section { background: var(--black); }
+        .contact-section { background: var(--deep); }
         .contact-wrap {
             display: grid; grid-template-columns: 1fr 380px; gap: 28px; align-items: start;
         }
         .contact-form-card {
-            background: var(--black-2); border-radius: 24px; padding: 50px;
-            border: 1px solid rgba(255,255,255,0.04);
+            background: var(--deep-2); border-radius: 24px; padding: 50px;
+            border: 1px solid rgba(176,212,59,0.07);
         }
         .contact-form-card h2 { font-size: clamp(1.7rem, 3.5vw, 2.4rem); margin-bottom: 8px; }
         .contact-form-card > p { color: var(--grey); font-size: 0.88rem; margin-bottom: 32px; }
@@ -381,7 +384,7 @@
             font-size: 0.76rem; font-weight: 700; letter-spacing: 1.5px;
             text-transform: uppercase; transition: var(--t);
         }
-        .btn-wa-g:hover { background: #1ebe5a; transform: translateY(-2px); box-shadow: 0 10px 30px rgba(37,211,102,0.3); }
+        .btn-wa-g:hover { background: #89B02C; transform: translateY(-2px); box-shadow: 0 10px 30px rgba(176,212,59,0.3); }
         .btn-call-dark {
             display: inline-flex; align-items: center; gap: 8px;
             padding: 14px 26px; border: 1px solid rgba(255,255,255,0.12);
@@ -389,7 +392,7 @@
             font-size: 0.76rem; font-weight: 600; letter-spacing: 1.5px;
             text-transform: uppercase; transition: var(--t);
         }
-        .btn-call-dark:hover { border-color: var(--copper); color: var(--copper); }
+        .btn-call-dark:hover { border-color: var(--leaf); color: var(--leaf); }
         .cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
         .cf-group { margin-bottom: 14px; }
         .cf-group label {
@@ -398,32 +401,32 @@
         }
         .cf-group input, .cf-group select, .cf-group textarea {
             width: 100%; padding: 13px 16px;
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.07); border-radius: 9px;
+            background: rgba(176,212,59,0.04);
+            border: 1px solid rgba(176,212,59,0.1); border-radius: 9px;
             color: var(--white); font-family: 'DM Sans', sans-serif; font-size: 0.87rem;
             outline: none; transition: 0.3s;
         }
-        .cf-group input::placeholder, .cf-group textarea::placeholder { color: #333; }
-        .cf-group select option { background: var(--black-2); }
-        .cf-group input:focus, .cf-group select:focus, .cf-group textarea:focus { border-color: var(--copper); background: rgba(215,168,127,0.04); }
+        .cf-group input::placeholder, .cf-group textarea::placeholder { color: #BBBBBB; }
+        .cf-group select option { background: var(--deep-2); }
+        .cf-group input:focus, .cf-group select:focus, .cf-group textarea:focus { border-color: var(--leaf); background: rgba(176,212,59,0.07); }
         .cf-group textarea { resize: vertical; min-height: 110px; }
         .cf-submit {
-            width: 100%; padding: 15px; background: var(--copper); color: var(--black);
+            width: 100%; padding: 15px; background: var(--leaf); color: var(--deep);
             border: none; border-radius: 9px; font-family: 'DM Sans', sans-serif;
             font-size: 0.8rem; font-weight: 700; letter-spacing: 2px;
             text-transform: uppercase; cursor: pointer; transition: var(--t); margin-top: 4px;
         }
-        .cf-submit:hover { background: #c3976b; transform: translateY(-2px); }
+        .cf-submit:hover { background: #89B02C; transform: translateY(-2px); }
         .cf-success {
             display: none; text-align: center; padding: 20px;
-            background: rgba(37,211,102,0.07); border: 1px solid rgba(37,211,102,0.2);
-            border-radius: 9px; color: #1ebe5a; font-weight: 600; margin-top: 12px; font-size: 0.86rem;
+            background: rgba(176,212,59,0.07); border: 1px solid rgba(176,212,59,0.2);
+            border-radius: 9px; color: #7B8E25; font-weight: 600; margin-top: 12px; font-size: 0.86rem;
         }
 
         .contact-info-panel { display: flex; flex-direction: column; gap: 16px; }
         .info-card {
-            background: var(--black-2); border-radius: 18px; padding: 24px 26px;
-            border: 1px solid rgba(255,255,255,0.04);
+            background: var(--deep-2); border-radius: 18px; padding: 24px 26px;
+            border: 1px solid rgba(176,212,59,0.07);
         }
         .info-label {
             font-size: 0.64rem; font-weight: 700; letter-spacing: 3px;
@@ -433,10 +436,10 @@
             color: var(--white); font-weight: 700; font-size: 0.92rem;
             text-decoration: none; display: flex; align-items: center; gap: 10px;
         }
-        .info-card a:hover { color: var(--copper); }
+        .info-card a:hover { color: var(--leaf); }
         .info-ico {
             width: 34px; height: 34px; border-radius: 9px;
-            background: var(--copper-dim); display: flex; align-items: center; justify-content: center;
+            background: var(--leaf-dim); display: flex; align-items: center; justify-content: center;
             font-size: 0.95rem; flex-shrink: 0;
         }
 
@@ -444,8 +447,8 @@
            FOOTER
         ============================================================ */
         .footer {
-            background: var(--black);
-            border-top: 1px solid var(--copper-line);
+            background: var(--deep);
+            border-top: 1px solid var(--leaf-line);
             padding: 80px 8% 40px;
         }
         .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 50px; margin-bottom: 56px; }
@@ -453,11 +456,11 @@
             font-family: 'Playfair Display', serif;
             font-size: 1.7rem; font-weight: 700; letter-spacing: 3px; margin-bottom: 14px;
         }
-        .footer-logo-txt span { color: var(--copper); }
+        .footer-logo-txt span { color: var(--leaf); }
         .footer-brand p { color: var(--grey); font-size: 0.83rem; line-height: 1.85; max-width: 270px; margin-bottom: 22px; }
         .footer-col h4 {
             font-size: 0.65rem; letter-spacing: 3px; text-transform: uppercase;
-            color: var(--copper); margin-bottom: 18px;
+            color: var(--leaf); margin-bottom: 18px;
         }
         .footer-col a { display: block; color: var(--grey); text-decoration: none; font-size: 0.83rem; margin-bottom: 11px; transition: 0.3s; }
         .footer-col a:hover { color: var(--white); }
@@ -468,7 +471,7 @@
             display: flex; justify-content: space-between; align-items: center;
             flex-wrap: wrap; gap: 12px;
         }
-        .footer-bottom p { font-size: 0.7rem; color: #333; letter-spacing: 2px; }
+        .footer-bottom p { font-size: 0.7rem; color: var(--grey); letter-spacing: 2px; }
 
         /* ============================================================
            FLOATING WHATSAPP
@@ -478,14 +481,14 @@
             display: flex; align-items: center; justify-content: center;
             width: 58px; height: 58px; background: var(--wa);
             border-radius: 50%; text-decoration: none;
-            box-shadow: 0 8px 32px rgba(37,211,102,0.45);
+            box-shadow: 0 8px 32px rgba(176,212,59,0.45);
             transition: var(--t); animation: waPulse 2.5s infinite;
         }
-        .wa-float a:hover { transform: scale(1.1); box-shadow: 0 14px 44px rgba(37,211,102,0.55); animation: none; }
+        .wa-float a:hover { transform: scale(1.1); box-shadow: 0 14px 44px rgba(176,212,59,0.55); animation: none; }
         .wa-float svg { width: 26px; height: 26px; fill: white; }
         @keyframes waPulse {
-            0%,100% { box-shadow: 0 8px 32px rgba(37,211,102,0.45); }
-            50% { box-shadow: 0 8px 48px rgba(37,211,102,0.7); }
+            0%,100% { box-shadow: 0 8px 32px rgba(176,212,59,0.45); }
+            50% { box-shadow: 0 8px 48px rgba(176,212,59,0.7); }
         }
 
         /* ============================================================
@@ -538,14 +541,14 @@
 
 <!-- NAVIGATION -->
 <nav class="nav" id="mainNav">
-    <a href="#" class="nav-logo">Prime <span>Harvest</span></a>
+    <a href="#" class="nav-logo">Otis <span>Farm</span></a>
     <div class="nav-links">
         <a href="#">Home</a>
         <a href="#products">Products</a>
         <a href="#testimonials">Reviews</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
-        <a href="https://wa.me/2348123456789?text=Hello%20Prime%20Harvest%2C%20I%20want%20to%20make%20an%20order" target="_blank" class="nav-wa">WhatsApp</a>
+        <a href="https://wa.me/2348123456789?text=Hello%20Otis%20Farm%2C%20I%20want%20to%20make%20an%20order" target="_blank" class="nav-wa">WhatsApp</a>
     </div>
     <button class="hamburger" id="hamburger" onclick="toggleMenu()">
         <span></span><span></span><span></span>
@@ -570,7 +573,7 @@
         <h1>Farm <em>Fresh.</em><br>Delivered.</h1>
         <p class="hero-sub">Healthy chickens, fresh eggs, catfish, lambs, and cows. Reliable supply for serious buyers and businesses since 2018.</p>
         <div class="hero-btns">
-            <a href="https://wa.me/2348123456789?text=Hello%20I%20want%20to%20order%20from%20Prime%20Harvest" target="_blank" class="btn-copper">
+            <a href="https://wa.me/2348123456789?text=Hello%20I%20want%20to%20order%20from%20Otis%20Farm" target="_blank" class="btn-leaf">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                 Order on WhatsApp
             </a>
@@ -603,7 +606,7 @@
 
         <div class="prod-card reveal" onclick="order('Eggs (Crates)')">
             <div class="prod-img-wrap">
-                <img class="prod-img" src="https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=800" alt="Fresh Eggs" loading="lazy">
+                <img class="prod-img" src="images/Fresh Eggs (Crates).png" alt="Fresh Eggs" loading="lazy">
                 <div class="prod-badge">Best Seller</div>
             </div>
             <div class="prod-body">
@@ -618,7 +621,7 @@
 
         <div class="prod-card reveal rd1" onclick="order('Poultry Chickens')">
             <div class="prod-img-wrap">
-                <img class="prod-img" src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=800" alt="Poultry Chickens" loading="lazy">
+                <img class="prod-img" src="images/Poultry Chickens.png" alt="Poultry Chickens" loading="lazy">
                 <div class="prod-badge">Bulk Available</div>
             </div>
             <div class="prod-body">
@@ -633,7 +636,7 @@
 
         <div class="prod-card reveal rd2" onclick="order('Catfish')">
             <div class="prod-img-wrap">
-                <img class="prod-img" src="https://images.unsplash.com/photo-1598514982841-7f0c3dc9df6c?w=800" alt="Catfish" loading="lazy">
+                <img class="prod-img" src="images/catfish.png" alt="Catfish" loading="lazy">
                 <div class="prod-badge">Premium</div>
             </div>
             <div class="prod-body">
@@ -648,7 +651,7 @@
 
         <div class="prod-card reveal" onclick="order('Lambs')">
             <div class="prod-img-wrap">
-                <img class="prod-img" src="https://images.unsplash.com/photo-1527153857715-3908f2bfae6e?w=800" alt="Lambs" loading="lazy">
+                <img class="prod-img" src="images/lambs.png" alt="Lambs" loading="lazy">
                 <div class="prod-badge">Limited Stock</div>
             </div>
             <div class="prod-body">
@@ -663,7 +666,7 @@
 
         <div class="prod-card reveal rd1" onclick="order('Cows')">
             <div class="prod-img-wrap">
-                <img class="prod-img" src="https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?w=800" alt="Cows" loading="lazy">
+                <img class="prod-img" src="images/cows.png" alt="Cows" loading="lazy">
                 <div class="prod-badge">Bulk Only</div>
             </div>
             <div class="prod-body">
@@ -698,10 +701,10 @@
     </div>
 </section>
 
-<!-- WHY PRIME HARVEST -->
+<!-- WHY OTIS FARM -->
 <section class="section why-section">
     <div class="sec-hd center reveal">
-        <span class="eyebrow">Why Prime Harvest</span>
+        <span class="eyebrow">Why Otis Farm</span>
         <h2>Four Reasons Buyers Choose Us</h2>
     </div>
     <div class="why-grid">
@@ -732,17 +735,17 @@
 <section id="about" class="section about-section">
     <div class="about-grid">
         <div class="about-img-wrap reveal">
-            <img class="about-img" src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=900" alt="Prime Harvest Farm">
+            <img class="about-img" src="images/livestock.png" alt="Otis Farm Livestock">
             <div class="about-badge">500+<span>Happy Clients</span></div>
         </div>
         <div class="reveal rd1">
-            <span class="eyebrow">About Prime Harvest</span>
-            <h2 style="color:var(--black);font-size:clamp(1.8rem,3.5vw,2.6rem);margin-bottom:18px;line-height:1.2">Abuja’s Trusted<br>Livestock Farm</h2>
-            <p style="color:#555;line-height:1.9;font-size:0.93rem;margin-bottom:14px">We are a trusted livestock farm based in Abuja, Nigeria, supplying high‑quality poultry, fish, and farm animals to businesses, retailers, and bulk buyers since 2018.</p>
-            <p style="color:#555;line-height:1.9;font-size:0.93rem;margin-bottom:14px">Our focus on proper feeding, hygiene, and a consistent supply chain means you get the best every time. Bulk buyers get priority access, and early reservations are recommended due to high demand.</p>
+            <span class="eyebrow">About Otis Farm</span>
+            <h2 style="color:var(--deep);font-size:clamp(1.8rem,3.5vw,2.6rem);margin-bottom:18px;line-height:1.2">Abuja's Trusted<br>Livestock Farm</h2>
+            <p style="color:#D4D4D4;line-height:1.9;font-size:0.93rem;margin-bottom:14px">We are a trusted livestock farm based in Abuja, Nigeria, supplying high‑quality poultry, fish, and farm animals to businesses, retailers, and bulk buyers since 2018.</p>
+            <p style="color:#D4D4D4;line-height:1.9;font-size:0.93rem;margin-bottom:14px">Our focus on proper feeding, hygiene, and a consistent supply chain means you get the best every time. Bulk buyers get priority access, and early reservations are recommended due to high demand.</p>
             <div class="about-expanded" id="aboutExp">
-                <p style="color:#555;line-height:1.9;font-size:0.93rem;margin-top:12px;margin-bottom:14px">We believe in transparency and quality. From our farm to your table, every product is handled with care. Our team is dedicated to ensuring that you receive fresh, healthy livestock — exactly as ordered.</p>
-                <p style="color:#555;line-height:1.9;font-size:0.93rem;margin-bottom:14px">📍 Located in Abuja, serving restaurants, hotels, and households across Nigeria.</p>
+                <p style="color:#D4D4D4;line-height:1.9;font-size:0.93rem;margin-top:12px;margin-bottom:14px">We believe in transparency and quality. From our farm to your table, every product is handled with care. Our team is dedicated to ensuring that you receive fresh, healthy livestock — exactly as ordered.</p>
+                <p style="color:#D4D4D4;line-height:1.9;font-size:0.93rem;margin-bottom:14px">📍 Located in Abuja, serving restaurants, hotels, and households across Nigeria.</p>
             </div>
             <button class="about-btn" id="aboutBtn" onclick="toggleAbout()">
                 Read More <span class="arr">↓</span>
@@ -760,7 +763,7 @@
     <div class="contact-wrap reveal">
         <div class="contact-form-card">
             <h2>Send a Message</h2>
-            <p>Tell us what you need and we’ll confirm availability and pricing.</p>
+            <p>Tell us what you need and we'll confirm availability and pricing.</p>
             <div class="cta-row">
                 <a href="https://wa.me/2348123456789?text=Hello%20I%20want%20to%20make%20an%20order" target="_blank" class="btn-wa-g">
                     <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -800,7 +803,7 @@
         <div class="contact-info-panel">
             <div class="info-card">
                 <div class="info-label">Phone / WhatsApp</div>
-                <a href="https://wa.me/2348123456789?text=Hello%20Prime%20Harvest%2C%20I%20want%20to%20enquire" target="_blank">
+                <a href="https://wa.me/2348123456789?text=Hello%20Otis%20Farm%2C%20I%20want%20to%20enquire" target="_blank">
                     <div class="info-ico">📞</div>0812 345 6789
                 </a>
             </div>
@@ -824,7 +827,7 @@
 <footer id="footer" class="footer">
     <div class="footer-top">
         <div class="footer-brand">
-            <div class="footer-logo-txt">Prime <span>Harvest</span></div>
+            <div class="footer-logo-txt">Otis <span>Farm</span></div>
             <p>Premium livestock and poultry farm. Fresh, healthy, and delivered with care across Abuja and beyond.</p>
         </div>
         <div class="footer-col">
@@ -843,7 +846,7 @@
         </div>
     </div>
     <div class="footer-bottom">
-        <p>© 2026 PRIME HARVEST · ALL RIGHTS RESERVED</p>
+        <p>© 2026 OTIS FARM · ALL RIGHTS RESERVED</p>
         <p>LIVESTOCK · POULTRY · ABUJA</p>
     </div>
 </footer>
@@ -875,7 +878,7 @@
 
     // Product card → WhatsApp
     function order(product) {
-        const msg = encodeURIComponent(`Hello Prime Harvest, I'm interested in ${product}. Please send details and pricing.`);
+        const msg = encodeURIComponent(`Hello Otis Farm, I'm interested in ${product}. Please send details and pricing.`);
         window.open(`https://wa.me/2348123456789?text=${msg}`, '_blank');
     }
 
@@ -896,7 +899,7 @@
         const need   = document.getElementById('cfNeed').value;
         const msg    = document.getElementById('cfMsg').value.trim();
         if (!name || !phone) { alert('Please enter your name and phone number.'); return; }
-        let txt = `Hi Prime Harvest, my name is ${name}.`;
+        let txt = `Hi Otis Farm, my name is ${name}.`;
         if (need) txt += ` I'm interested in: ${need}.`;
         if (msg) txt += ` Details: ${msg}`;
         txt += ` My contact: ${phone}.`;
