@@ -334,7 +334,7 @@
         .about-section .eyebrow { color: var(--forest); }
         .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
         .about-img-wrap { position: relative; }
-        .about-img { width: 100%; max-height: 320px; height: auto; object-fit: contain; border-radius: 18px; display: block; }
+        .about-img { width: 100%; max-height: 320px; height: 320px; object-fit: cover; object-position: top center; border-radius: 18px; display: block; }
         .about-badge {
             position: absolute; bottom: -22px; right: -22px;
             background: var(--leaf); color: var(--deep);
@@ -606,7 +606,7 @@
 
         <div class="prod-card reveal" onclick="order('Eggs (Crates)')">
             <div class="prod-img-wrap">
-                <img class="prod-img" src="images/Fresh Eggs (Crates).png" alt="Fresh Eggs" loading="lazy">
+                <img class="prod-img" src="images/Fresh Eggs (Crates).png" alt="Fresh Eggs" loading="lazy" decoding="async">
                 <div class="prod-badge">Best Seller</div>
             </div>
             <div class="prod-body">
@@ -621,7 +621,7 @@
 
         <div class="prod-card reveal rd1" onclick="order('Poultry Chickens')">
             <div class="prod-img-wrap">
-                <img class="prod-img" src="images/Poultry Chickens.png" alt="Poultry Chickens" loading="lazy">
+                <img class="prod-img" src="images/Poultry Chickens.png" alt="Poultry Chickens" loading="lazy" decoding="async">
                 <div class="prod-badge">Bulk Available</div>
             </div>
             <div class="prod-body">
@@ -636,7 +636,7 @@
 
         <div class="prod-card reveal rd2" onclick="order('Catfish')">
             <div class="prod-img-wrap">
-                <img class="prod-img" src="images/catfish.png" alt="Catfish" loading="lazy">
+                <img class="prod-img" src="images/catfish.png" alt="Catfish" loading="lazy" decoding="async">
                 <div class="prod-badge">Premium</div>
             </div>
             <div class="prod-body">
@@ -651,7 +651,7 @@
 
         <div class="prod-card reveal" onclick="order('Lambs')">
             <div class="prod-img-wrap">
-                <img class="prod-img" src="images/lambs.png" alt="Lambs" loading="lazy">
+                <img class="prod-img" src="images/Lambs.png" alt="Lambs" loading="lazy" decoding="async">
                 <div class="prod-badge">Limited Stock</div>
             </div>
             <div class="prod-body">
@@ -666,7 +666,7 @@
 
         <div class="prod-card reveal rd1" onclick="order('Cows')">
             <div class="prod-img-wrap">
-                <img class="prod-img" src="images/cows.png" alt="Cows" loading="lazy">
+                <img class="prod-img" src="images/Cows.png" alt="Cows" loading="lazy" decoding="async">
                 <div class="prod-badge">Bulk Only</div>
             </div>
             <div class="prod-body">
@@ -735,7 +735,7 @@
 <section id="about" class="section about-section">
     <div class="about-grid">
         <div class="about-img-wrap reveal">
-            <img class="about-img" src="images/livestock.png" alt="Otis Farm Livestock">
+            <img class="about-img" src="images/livestock.png" alt="Otis Farm Livestock" loading="lazy" decoding="async">
             <div class="about-badge">500+<span>Happy Clients</span></div>
         </div>
         <div class="reveal rd1">
